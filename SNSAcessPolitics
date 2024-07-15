@@ -1,0 +1,21 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "arn:aws:iam::588898467994:root"
+      },
+      "Action": "SNS:Publish",
+      "Resource": "arn:aws:sns:us-east-1:588898467994:LowInventoryNotifications"
+    },
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "lambda.amazonaws.com"
+      },
+      "Action": "SNS:Publish",
+      "Resource": "arn:aws:sns:us-east-1:588898467994:LowInventoryNotifications"
+    }
+  ]
+}
